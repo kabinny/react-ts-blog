@@ -1,51 +1,34 @@
-# Getting Started with Create React App
+# React Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React와 TypeScript로 만든 블로그 앱.
 
-## Available Scripts
+## 프로젝트 실행
 
-In the project directory, you can run:
+`yarn start`로 개발 모드 실행되면
+[http://localhost:3000](http://localhost:3000)에서 확인 가능
 
-### `yarn start`
+## 프로젝트 빌드 & 배포
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 프로젝트 빌드
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`yarn build`
 
-### `yarn test`
+### firebase cli로 배포
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+firebase tools가 설치되지 않았다면 설치  
+`npm install -g firebase-tools`
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+배포하기  
+`firebase deploy --only hosting`
 
 ## firebase, API 키 보안 작업
 
 - Firebase > Cloud Firestore > 규칙 에서 보안 규칙을 변경한다.
 - Google Cloud > 해당 앱 > API 및 서비스 > 사용자 인증 정보 > APi 키 를 클릭해서 키 제한 사항을 설정한다. 웹사이트에 체크하고, 사용할 url 추가
+
+## 참고할 기능
+
+- firebase > Authentication: 이메일/비밀번호로 회원가입 및 로그인
+- firebase > Firestore Database: 기본적인 데이터 CRUD (포스트), 배열 요소 update (댓글 기능 부분)
+- React Context API: user 정보가 있는 AuthContext.tsx, 다크모드 설정을 위한 ThemeContext.tsx
+- tsconfig: 파일 절대경로 설정 (baseUrl, paths)
