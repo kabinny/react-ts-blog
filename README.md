@@ -44,3 +44,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## firebase, API 키 보안 작업
+
+- Firebase > Cloud Firestore > 규칙 에서 보안 규칙을 변경한다.
+- Google Cloud > 해당 앱 > API 및 서비스 > 사용자 인증 정보 > APi 키 를 클릭해서 키 제한 사항을 설정한다. 웹사이트에 체크하고, 사용할 url 추가
