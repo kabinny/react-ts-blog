@@ -1,6 +1,7 @@
 # React Blog
 
-React와 TypeScript로 만든 블로그 앱.
+React와 TypeScript로 만든 블로그 앱.  
+[https://react-ts-blog-a3958.web.app/](https://react-ts-blog-a3958.web.app/)
 
 ## 프로젝트 실행
 
